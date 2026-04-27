@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mohsen Haggag — Automation Specialist</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Serif:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -12,10 +12,13 @@
   --accent:#06B6D4;--green:#10B981;--purple:#7C3AED;
   --text:#F1F5F9;--muted:#94A3B8;--border:rgba(255,255,255,0.08);
   --card:#111827;--light:#1E293B;
+  --font-sans:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif;
+  --font-serif:'IBM Plex Serif',serif;
+  --font-mono:'IBM Plex Mono',monospace;
 }
 html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7}
-body.ar{font-family:'Cairo',sans-serif}
+body{background:var(--navy);color:var(--text);font-family:var(--font-sans);font-size:15px;line-height:1.8;letter-spacing:0.01em;-webkit-font-smoothing:antialiased}
+body.ar{font-family:'IBM Plex Sans Arabic',sans-serif}
 
 /* NAV */
 nav{
@@ -25,7 +28,7 @@ nav{
   background:rgba(8,15,30,0.85);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
 }
-.nav-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-0.5px}
+.nav-brand{font-family:var(--font-serif);font-weight:800;font-size:18px;color:#fff;letter-spacing:-0.5px}
 .nav-brand span{color:var(--accent)}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
@@ -64,13 +67,13 @@ nav{
 .eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero h1{
-  font-family:'Syne',sans-serif;font-size:clamp(52px,8vw,96px);
+  font-family:var(--font-serif);font-size:clamp(48px,7.5vw,90px);letter-spacing:-2px;
   font-weight:800;line-height:0.95;letter-spacing:-2px;
   margin-bottom:24px;
 }
 .hero h1 .line2{color:var(--accent)}
 .hero-sub{
-  font-size:18px;color:var(--muted);max-width:520px;
+  font-size:17px;color:var(--muted);max-width:520px;line-height:1.85;font-weight:300;
   margin-bottom:48px;line-height:1.7;
 }
 .hero-sub.ar{direction:rtl;text-align:right}
@@ -79,7 +82,7 @@ nav{
   background:var(--accent);color:#000;font-weight:700;font-size:14px;
   padding:14px 32px;border-radius:8px;text-decoration:none;
   transition:all .2s;border:none;cursor:pointer;
-  font-family:'Syne',sans-serif;letter-spacing:0.3px;
+  font-family:var(--font-serif);letter-spacing:0.3px;
 }
 .btn-primary:hover{background:#22D3EE;transform:translateY(-1px)}
 .btn-ghost{
@@ -93,7 +96,7 @@ nav{
   padding-top:40px;border-top:1px solid var(--border);
 }
 .stat-val{
-  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
+  font-family:var(--font-serif);font-size:36px;font-weight:800;
   color:#fff;line-height:1;margin-bottom:4px;
 }
 .stat-val span{color:var(--accent)}
@@ -107,7 +110,7 @@ section{padding:96px 40px}
   text-transform:uppercase;color:var(--accent);margin-bottom:16px;
 }
 .section-title{
-  font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);
+  font-family:var(--font-serif);font-size:clamp(28px,4vw,44px);
   font-weight:800;line-height:1.1;margin-bottom:16px;
 }
 .section-sub{font-size:16px;color:var(--muted);max-width:540px;line-height:1.7}
@@ -136,7 +139,7 @@ section{padding:96px 40px}
 .pkg-card.standard .pkg-tier{color:var(--blue)}
 .pkg-card.premium .pkg-tier{color:var(--purple)}
 .pkg-price{
-  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
+  font-family:var(--font-serif);font-size:36px;font-weight:800;
   color:#fff;line-height:1;margin-bottom:4px;
 }
 .pkg-usd{font-size:13px;color:var(--muted);margin-bottom:24px}
@@ -144,7 +147,7 @@ section{padding:96px 40px}
 .pkg-features{list-style:none}
 .pkg-features li{
   display:flex;align-items:center;gap:10px;
-  font-size:13px;color:var(--muted);padding:6px 0;
+  font-size:13px;color:var(--muted);padding:6px 0;line-height:1.7;
 }
 .pkg-features li::before{
   content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0;
@@ -173,7 +176,7 @@ section{padding:96px 40px}
 .sc-num{
   width:30px;height:30px;border-radius:6px;
   background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);
-  color:var(--accent);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;
+  color:var(--accent);font-family:var(--font-serif);font-size:11px;font-weight:700;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .sc-titles h3{font-size:13px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:6px}
@@ -228,7 +231,7 @@ section{padding:96px 40px}
   max-width:700px;margin:0 auto;text-align:center;
 }
 .cta-inner h2{
-  font-family:'Syne',sans-serif;font-size:44px;font-weight:800;
+  font-family:var(--font-serif);font-size:44px;font-weight:800;
   line-height:1.1;margin-bottom:16px;
 }
 .cta-inner h2.ar{direction:rtl}
@@ -620,6 +623,8 @@ footer p{font-size:12px;color:var(--muted)}
       <div class="cta-btns">
         <a href="https://www.upwork.com/freelancers/~01d7b77b1bac70a489" class="btn-primary" target="_blank">Hire on Upwork</a>
         <a href="https://mostaql.com" class="btn-ghost" target="_blank">Hire on Mostaql</a>
+        <a href="https://wa.me/201029168056" class="btn-primary" target="_blank" style="background:#25D366;border-color:#25D366">WhatsApp Me</a>
+        <a href="https://www.fiverr.com/s/o81YYQ4" class="btn-ghost" target="_blank">Fiverr</a>
       </div>
       <div class="cta-platforms">
         <div class="platform-item">
@@ -631,6 +636,21 @@ footer p{font-size:12px;color:var(--muted)}
           <div class="platform-name">Mostaql</div>
           <div class="platform-label lang-en">EGP payments</div>
           <div class="platform-label lang-ar" style="display:none">دفع بالجنيه</div>
+        </div>
+        <div class="platform-item">
+          <div class="platform-name" style="color:#25D366">WhatsApp</div>
+          <div class="platform-label lang-en">+20 102 916 8056</div>
+          <div class="platform-label lang-ar" style="display:none">واتساب مباشر</div>
+        </div>
+        <div class="platform-item">
+          <a href="https://www.fiverr.com/s/o81YYQ4" target="_blank" style="text-decoration:none"><div class="platform-name" style="color:#1DBF73">Fiverr ↗</div></a>
+          <div class="platform-label lang-en">Gig-based projects</div>
+          <div class="platform-label lang-ar" style="display:none">مشاريع فايفر</div>
+        </div>
+        <div class="platform-item">
+          <a href="https://www.facebook.com/share/1NbMb6Ffot/" target="_blank" style="text-decoration:none"><div class="platform-name" style="color:#1877F2">Facebook ↗</div></a>
+          <div class="platform-label lang-en">Follow & message</div>
+          <div class="platform-label lang-ar" style="display:none">تابعني على فيسبوك</div>
         </div>
         <div class="platform-item">
           <div class="platform-name">24/7</div>
