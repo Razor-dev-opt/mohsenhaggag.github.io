@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -297,7 +297,7 @@ footer p{font-size:12px;color:var(--muted)}
     <a href="#contact" class="lang-en">Contact</a>
     <a href="#contact" class="lang-ar" style="display:none">تواصل</a>
   </div>
-  <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">العربية</button>
+  <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">English</button>
 </nav>
 
 <section class="hero" id="home">
@@ -705,7 +705,7 @@ footer p{font-size:12px;color:var(--muted)}
 </footer>
 
 <script>
-let currentLang = 'en';
+let currentLang = 'ar';
 function toggleLang(){
   currentLang = currentLang === 'en' ? 'ar' : 'en';
   const btn = document.getElementById('lang-btn');
@@ -723,6 +723,14 @@ function toggleLang(){
     btn.textContent = 'العربية';
   }
 }
+// Start in Arabic
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.lang-ar').forEach(el => el.style.display = '');
+  document.body.classList.add('ar');
+  document.body.style.direction = 'rtl';
+  document.getElementById('lang-btn').textContent = 'English';
+});
 
 function filterScenarios(tier, btn){
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
